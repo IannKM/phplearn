@@ -97,10 +97,17 @@ echo var_dump([...$fruits, ...$veggie]);
 echo '</pre>'. '<br>';
 
 //sorting of array (reverse order also)
+sort($fruits);
+echo '<pre>';
+var_dump(($fruits));
+echo '</pre>'. '<br></br>';
 
 
-
-
+/*reverse sort*/
+echo '<pre>';
+rsort($fruits);
+var_dump($fruits);
+echo '</pre>';
 
 
     ?>
