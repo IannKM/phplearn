@@ -13,18 +13,35 @@ $person = [
     'name' => 'brad',
     'surname' => 'clob',
     'age' => '29',
-    'hobbies' => ['gaming, movies']
+    'hobbies' => ['gaming', 'movies']
  
 ];
-echo 'pre';
+echo '<pre>';
 var_dump($person);
-echo '</pre>';
+echo '</pre><br>';
+    #you can also uses
+echo '<pre>';
+print_r($person);
+echo '</pre><br>';
 
+//get elements by key
+echo $person['name']. '<br>'; 
 
+//set element by key
+$person['channel'] = 'youtube';
+echo '<pre>';
+print_r($person);
+echo '</pre><br>';
 
+//Null coalescing assignment operator
 
+if (!isset($person['address'])) {
+    $person['address'] = 'unknown';
 
-
+}
+echo '<pre>';
+print_r($person);
+echo '</pre><br>';
 
 
 
