@@ -7,6 +7,9 @@
     <body>
 
     <?php
+
+    
+
 //create arrays
 
 $fruits = ['apple', 'banana', 'grapes'];
@@ -108,6 +111,8 @@ echo '<pre>';
 rsort($fruits);
 var_dump($fruits);
 echo '</pre>';
+
+
 
 
     ?>
