@@ -7,6 +7,18 @@
     <body>
 
     <?php
+//create an associative array- an abstract data type that can hold data in (key, value) pairs.
+
+$person = [
+    'name' => 'brad',
+    'surname' => 'clob',
+    'age' => '29',
+    'hobbies' => ['gaming, movies']
+ 
+];
+echo 'pre';
+var_dump($person);
+echo '</pre>';
 
 
 
