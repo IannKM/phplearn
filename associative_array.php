@@ -34,18 +34,64 @@ print_r($person);
 echo '</pre><br>';
 
 //Null coalescing assignment operator
-
+    /*
 if (!isset($person['address'])) {
     $person['address'] = 'unknown';
 
 }
 echo '<pre>';
 print_r($person);
+echo '</pre><br>';              */
+
+  /* short hand version for this*/
+
+  $person ['address'] ??= 'ABSENT';
+  echo '<b>short-hand version:</b>'. '<pre>';
+  print_r($person);
+  echo '</pre><br>';
+
+
+//check if array has a specific key
+
+        #use isset()
+
+//print the keys of the array
+
+echo '<pre>';
+print_r(array_keys($person));
+echo '</pre><br>';
+//print the values of the array 
+echo '<pre>';
+print_r(array_values($person));
+echo '</pre><br>';
+ 
+//soring associative arrays by value
+        /* sorting by keys */
+ksort($person);
+echo '<pre>';
+print_r($person);
 echo '</pre><br>';
 
+        /* sort by values */
+asort($person);
+echo '<pre>';
+print_r($person);
+echo '</pre><br>';
 
+// 2D arrays
+ echo 'On the case below: <b><i>1=true, blank=false.</i></b>';
+ $todos = [
+    ['Title' => 'School work', 'completed' => true],
+    ['Title' => 'music practise', 'completed' => false],
 
-    ?>
+ ];
+ echo '<pre>';
+ print_r($todos);
+ echo '</pre><br>'; 
+ 
+ 
+ 
+ ?>
 <br>
 <br>
 <a href='strings.php'><button class="btn0">BACK</button></a>
