@@ -94,8 +94,8 @@ echo '</pre><br>';
  ?>
 <br>
 <br>
-<a href='strings.php'><button class="btn0">BACK</button></a>
-<a href='#'><button class="btn1">NEXT</button></a>
+<a href='arrays.php'><button class="btn0">BACK</button></a>
+<a href='conditionals.php'><button class="btn1">NEXT</button></a>
 
 </body>
 </html>
