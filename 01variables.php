@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title> # </title>
+    <title> Variables</title>
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -72,10 +72,7 @@ echo("<button onclick=\"location.href='numbers.php'\">next>num. page </button>")
 <br>
 
 
-
-
-
-<a href=" numbers.php" class="button">Click Me</button></a>
+<a href=" 02numbers.php" class="button">Next</button></a>
     </body>
 </html>
 

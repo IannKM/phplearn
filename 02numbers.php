@@ -1,4 +1,11 @@
-<?php
+<!doctype html>
+<html>
+<head>
+    <title> Numbers </title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+      <?php
  //numbers   
    /* $a = 5 ;
       $b = 6 ;
@@ -42,11 +49,19 @@
     
     
     
-    
+  /*  
    echo '<br>';
    echo '<br>';
-   echo("<button onclick=\"location.href='test.php'\">BACK </button>");   
-   echo("<button onclick=\"location.href='strings.php'\">NEXT page </button>");   
+   echo("<button onclick=\"location.href='01variables.php'\">BACK </button>");   
+   echo("<button onclick=\"location.href='03strings.php'\">NEXT page </button>");   
     
-    
+    */
     ?>
+</body>
+
+    
+<a href='01variables.php'><button class="#">BACK</button></a>
+<a href='03strings.php'><button class="btn1">NEXT</button></a>
+
+
+</html>

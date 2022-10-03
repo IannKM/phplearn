@@ -66,8 +66,8 @@ echo '<br>';
     </body>
 
     
-<a href='numbers.php'><button class="#">BACK</button></a>
-<a href='arrays.php'><button class="btn1">NEXT</button></a>
+<a href='02numbers.php'><button class="#">BACK</button></a>
+<a href='04arrays.php'><button class="btn1">NEXT</button></a>
 
 
 </html>

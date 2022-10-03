@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title> Strings </title>
+    <title> Conditionals </title>
    <link rel="stylesheet" href="styles.css">
 </head>
     <body>
@@ -108,8 +108,8 @@ switch ($userrole) {
     ?>
 <br>
 <br>
-<a href='associative_array.php'><button class="btn0">BACK</button></a>
-<a href='loops'><button class="btn1">NEXT</button></a>
+<a href='05associative_array.php'><button class="btn0">BACK</button></a>
+<a href='07loops'><button class="btn1">NEXT</button></a>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title> Strings </title>
+    <title> Loops </title>
    <link rel="stylesheet" href="styles.css">
 </head>
     <body>
@@ -64,26 +64,6 @@ foreach ($person as $key => $value) {
     } else {
     echo $key.' '. $value. '<br>';
 }}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     ?>
