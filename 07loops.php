@@ -70,7 +70,7 @@ foreach ($person as $key => $value) {
 <br>
 <br>
 <a href='conditionals.php'><button class="btn0">BACK</button></a>
-<a href='loops'><button class="btn1">NEXT</button></a>
+<a href='08functions.php'><button class="btn1">NEXT</button></a>
 
 </body>
 </html>
