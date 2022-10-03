@@ -102,7 +102,7 @@ echo '</pre>'. '<br>';
 //sorting of array (reverse order also)
 sort($fruits);
 echo '<pre>';
-var_dump(($fruits));
+var_dump($fruits);
 echo '</pre>'. '<br></br>';
 
 

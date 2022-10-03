@@ -109,7 +109,7 @@ switch ($userrole) {
 <br>
 <br>
 <a href='05associative_array.php'><button class="btn0">BACK</button></a>
-<a href='07loops'><button class="btn1">NEXT</button></a>
+<a href='07loops.php'><button class="btn1">NEXT</button></a>
 
 </body>
 </html>

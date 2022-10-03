@@ -69,7 +69,7 @@ foreach ($person as $key => $value) {
     ?>
 <br>
 <br>
-<a href='conditionals.php'><button class="btn0">BACK</button></a>
+<a href='06conditionals.php'><button class="btn0">BACK</button></a>
 <a href='08functions.php'><button class="btn1">NEXT</button></a>
 
 </body>
