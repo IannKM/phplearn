@@ -45,7 +45,7 @@ echo'</pre>';
 <br>
 <br>
 <a href='08functions.php'><button class="btn0">BACK</button></a>
-<a href='/10website/web_dev.php'><button class="btn1">NEXT</button></a>
+<a href='./10website/web_dev.php'><button class="btn1">NEXT</button></a>
 
 </body>
 </html>

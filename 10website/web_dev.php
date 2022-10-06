@@ -31,8 +31,8 @@
    ?>
 <br>
 <br>
-<a href='09dates.php'><button class="btn0">BACK</button></a>
-<a href='09dates.php'><button class="btn1">NEXT</button></a>
+<a href='../09dates.php'><button class="btn0">BACK</button></a>
+<a href="#.php"><button class="btn1">NEXT</button></a>
 
 </body>
 </html>
