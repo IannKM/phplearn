@@ -2,9 +2,9 @@
 <html>
 <head>
     <title> website </title>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="/phplearn/styles.css">
 </head>
-    <body >
+    <body id="web">
     <?php
 
 

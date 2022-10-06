@@ -1,6 +1,17 @@
 body {
-    background-color: rgb(142, 194, 211);
+     background-color: rgb(142, 194, 211); 
+    /* background-color:rgb(191, 194, 26);  */
+
+  }   
+
+  #web {
+    background-color:tomato;
+  
   }
+
+
+
+
 a button {
         background-color: #c91cc09d;
         border: none;
