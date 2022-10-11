@@ -61,5 +61,5 @@ if (file_exists($filename)) {
 <br>
 <br>
 <a href='../10website/web_dev.php'><button class="btn0">BACK</button></a>
-<a href="#"><button class="btn1">NEXT</button></a>
+<a href="../12OOP/one.php"><button class="btn1">NEXT</button></a>
 <br></br>
