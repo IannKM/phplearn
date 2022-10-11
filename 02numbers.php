@@ -36,16 +36,17 @@
    is_numeric(3g); //false */
 
 //conversion
-
-#$strnumber = '13.5';
-#$number = (float)$strnumber;
-#echo var_dump($number). '<br>';
-#echo var_dump($n_one = (int)$strnumber). '<br>';
-
+      /*
+$strnumber = '13.5';
+$number = (float)$strnumber;
+echo var_dump($number). '<br>';
+echo var_dump($n_one = (int)$strnumber). '<br>';
+      */ 
+      
 //formatting numbers
 
-   $number = 123456789.12345;
-   echo number_format($number, 2, '.', ',');
+  # $number = 123456789.12345;
+  # echo number_format($number, 2, '.', ',');
     
     
     
@@ -59,7 +60,8 @@
     ?>
 </body>
 
-    
+<br>
+<br>    
 <a href='01variables.php'><button class="#">BACK</button></a>
 <a href='03strings.php'><button class="btn1">NEXT</button></a>
 
