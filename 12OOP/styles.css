@@ -1,0 +1,28 @@
+body {
+    background-color:rgb(255, 172, 47);
+  
+  }
+
+  a button {
+    background-color: #c91cc09d;
+    border: none;
+    border-radius: 8px;
+    color:black;
+    padding: 11px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+
+}        
+.btn0{
+  background-color: #c91cc09d;
+}        
+
+.btn1{
+background-color: #1c87c9;
+margin-left: 12px;
+
+
+}
