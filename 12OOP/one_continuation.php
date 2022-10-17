@@ -46,5 +46,4 @@ echo Fellow::$counter;
 <br>
 <br>
 <a href='../12OOP/one.php '><button class="btn0">BACK</button></a>
-<a href="#"><button class="btn1">NEXT</button></a>
-<br></br>
+<a href="../13curl/curl.php"><button class="btn1">NEXT</button></a>
