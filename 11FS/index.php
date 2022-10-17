@@ -38,6 +38,7 @@ file_put_contents('sample.txt', 'some content');
 
 
 // File_GET_contents from URL
+
 /* $userjson = file_get_contents('https://jsonplaceholder.typicode.com/posts');
 #echo $userjson;
     /* convert the json data to array 
