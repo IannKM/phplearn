@@ -43,7 +43,7 @@ $products = $statement-> fetchAll(PDO::FETCH_ASSOC);
       <th scope="col">Image</th>
       <th scope="col">Title</th>
       <th scope="col">Price</th>
-      <th scope="col">Creation Date/th>
+      <th scope="col">Creation Date</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -68,7 +68,7 @@ $products = $statement-> fetchAll(PDO::FETCH_ASSOC);
             
         
         
-       <?php endforeach?>
+       <?php endforeach; ?>
     
     
     ?>

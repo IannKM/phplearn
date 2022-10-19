@@ -9,9 +9,19 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); # to throw an err
         var_dump($_SERVER);
         echo '</pre>';
         exit; */
+/*  How to check where the image is uploaded */
+        /* echo '<pre>'; 
+        var_dump($_FILES);
+        echo '</pre>';
+         exit; */
 
+$errors = [];  
 
-echo $_SERVER ['REQUEST_METHOD']. '<br>';
+$title = '';
+$price = '';
+$description = ''; 
+$image = '';
+/* echo $_SERVER ['REQUEST_METHOD']. '<br>'; */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
@@ -21,20 +31,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $price = $_POST['price'];
         $date = date('Y-m-d H:i:s');
 
+       
+    if (!$title){
+        $errors[] = 'Product Title is required.';
+    }
+    if (!$price){
+        $errors[] = 'Product Price is required.';
+    }
+    if (!$image){
+        $errors[] = 'Product Image is required.';
+    }
+
+    if (!is_dir('images')){
+        mkdir('images');
+    }
+
+
+
+    if (empty($errors)) {
+
+        $image = $_FILES[ 'image'] ?? null; 
+        $imagePath = '';
+        if ($image){
+
+            $imagePath = 'images/'.randomString(8).'/'.$image['name'];
+            mkdir(dirname($imagePath));
+
+
+            move_uploaded_file($image['tmp_name'], $imagePath);
+        }
+
         /* insert in the dtb */
         $statement = $pdo->prepare("INSERT INTO products (title, image, description, price, create_date)
                         VALUES (:title, :image, :description, :price, :date)");
        
         $statement->bindValue(':title', $title);
-        $statement->bindValue(':image', '');
+        $statement->bindValue(':image', $imagePath);
         $statement->bindValue(':description', $description);
         $statement->bindValue(':price', $price);
         $statement->bindValue(':date', $date);
         $statement->execute();
-         
+        header('location: crud.php'); #redirect after submitting
+    } 
+}
+
+/* used to Assigning a random name to the folder where image is saved */
+
+function randomString($n)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $str = '';
+    for ($i = 0; $i < $n; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $str .= $characters[$index];
     }
 
-
+    return $str;
+}
 
 
 
@@ -59,7 +112,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <body>
     <h1> Create new Product </h1>
 
-    <form action="" method="POST">
+
+        <?php if (!empty($errors)): ?>
+                <div  class="alert alert-danger"> 
+                    <?php foreach ($errors as $errors): ?> 
+
+                <div> <?php echo $errors ?> </div> 
+                <?php endforeach; ?>
+
+                </div>
+        <?php endif; ?>
+
+
+    <form action="" method="POST" enctype="multipart/form-data">
   <div class="mb-3">
     <label >Product Image</label></br>
     <input type="file" name="image" >
@@ -67,17 +132,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="mb-3">
     <label >Product Title</label>
-    <input type="text" name="title" class="form-control"  >
+    <input type="text" name="title" class="form-control" value="<?php echo $title ?>"  >
   </div>
 
   <div class="mb-3">
     <label >Product Description</label>
-    <textarea  class="form-control" name="description" ></textarea>
+    <textarea  class="form-control" name="description" value= "<?php echo $description ?>" ></textarea>
   </div>
 
   <div class="mb-3">
     <label >Product Price</label>
-    <input type="number" step=".01" name="price" class="form-control"  >
+    <input type="number" step=".01" name="price" class="form-control" value=" <?php echo $price ?> " >
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
