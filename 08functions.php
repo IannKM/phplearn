@@ -8,30 +8,35 @@
 
     <?php
 // Function which prints "Hello i am Siri"
-    /*
+    
 
-function hello()  #to avoid code repetition and have reusable code
+/* function hello()  #to avoid code repetition and have reusable code
 {
     echo "Hello i am Siri";
 
 }  hello(); 
+hello();
+hello();
+ */
 
-*/
 
 //Function with argument
+/* 
 function hello ($name)
-{
-   # echo "Hello i am $name";
-
-#hello('siri<br>');
-#hello('alexa<br>');
+{ 
+   echo "Hello I am $name";
+}
+hello('Siri.<br>');
+hello('Alexa.<br>');  */
 
             /*alternatively */
-
+/*             
+ function hello ($name)
+{ 
     return"Hello i am $name";
 }
 echo hello('siri<br>');
-echo hello('alexa<br>');
+echo hello('alexa<br>');  */
 
 // Create sum of two functions
         /*
@@ -59,7 +64,7 @@ echo sum(1, 2, 3, 4, 5, 6,);
 
         */
 // Arrow functions
-
+echo '<br>';
 
 function sum(...$nums)
 {
