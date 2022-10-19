@@ -7,9 +7,9 @@
     <body>
       <?php
  //numbers   
-   /* $a = 5 ;
+   $a = 5 ;
       $b = 6 ;
-      $c = 4.3 ; */
+      $c = 4.3 ;
 
 //arithmetic
     #echo $a + $b. '<br>';
@@ -21,11 +21,13 @@
    #$a += $b; echo $a. '<br>';
 
 // increment operator
-      #echo $a++.'<br>';
-      #echo ++$a.'<br>';
+/* 
+            echo $a++.'<br>'; # value of 'a' is printed first then increased by +1
+            echo ++$a.'<br>'; # here it is increased by +1 then the increased value is printed
 
-       #echo $a--.'<br>';
-      #echo --$a.'<br>';
+            echo $a--.'<br>'; #value of 'a' is printed first then reduced by -1
+            echo --$a.'<br>'; # here it is reduced by -1 then the reduced value is printed
+ */
 
 // number checking fxn
    /*
