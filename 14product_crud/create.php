@@ -1,7 +1,6 @@
 <?php 
 
 $pdo = new PDO('mysql:host=localhost;port=3306;dbname=products_crud', 'root', '');
-
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); # to throw an error message during connection if it fails
 
 /* How to check the current rquest method: is it POST OR GET */
@@ -20,7 +19,10 @@ $errors = [];
 $title = '';
 $price = '';
 $description = ''; 
-$image = '';
+
+/* $image = ''; */  #uncomment this also to prevent submitting form without image
+
+
 /* echo $_SERVER ['REQUEST_METHOD']. '<br>'; */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -38,9 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$price){
         $errors[] = 'Product Price is required.';
     }
-    if (!$image){
+
+    /* if (!$image){    #uncomment to prevent submitting form without image
         $errors[] = 'Product Image is required.';
-    }
+    } */
 
     if (!is_dir('images')){
         mkdir('images');
@@ -52,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $image = $_FILES[ 'image'] ?? null; 
         $imagePath = '';
-        if ($image){
+        if ($image && $image['tmp_name']){
 
             $imagePath = 'images/'.randomString(8).'/'.$image['name'];
             mkdir(dirname($imagePath));
@@ -72,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $statement->bindValue(':date', $date);
         $statement->execute();
         header('location: crud.php'); #redirect after submitting
-    } 
+    }   
 }
 
 /* used to Assigning a random name to the folder where image is saved */
