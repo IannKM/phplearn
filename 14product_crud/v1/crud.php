@@ -103,7 +103,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
   <br>
   <br>
   <a href='../13curl/curl.php '><button class="btn0">BACK</button></a>
-  <a href="..#"><button class="btn1">NEXT</button></a>
+  <a href="../v2/crud.php"><button class="btn1">NEXT</button></a>
 </body>
 
 </html>
