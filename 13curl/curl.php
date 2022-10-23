@@ -67,4 +67,4 @@ echo $result;
 <br>
 <br>
 <a href='../12OOP/one_continuation.php '><button class="btn0">BACK</button></a>
-<a href="../14product_crud/crud.php"><button class="btn1">NEXT</button></a>
+<a href="../14product_crud/v1/crud.php"><button class="btn1">NEXT</button></a>
