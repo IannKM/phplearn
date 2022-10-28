@@ -1,8 +1,11 @@
 <?php
 
-/* connection string */
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=products_crud', 'root', '');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); # to throw an error message during connection if it fails
+
+/* database connection string */
+ /** @var $pdo \PDO  */
+$pdo = require_once 'views/partials/database.php';
+
+
 
 $search = $_GET['search'] ?? '';
   if ($search) {
@@ -22,24 +25,9 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<!doctype html>
-<html lang="en">
-<!-- you can add this: dir="auto"  -->
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-7mQhpDl5nRA5nY9lr8F1st2NbIly/8WqhjTp+0oFxEA/QUuvlbF6M1KXezGBh3Nb" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+<?php include_once 'views/partials/header.php';  ?>
 
 
-  <title> PRODUCTS CRUD </title>
-</head>
-
-<body>
   <h1> PRODUCTS CRUD </h1>
 
   <!-- creating form for entry -->
@@ -102,7 +90,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   <br>
   <br>
-  <a href='../13curl/curl.php '><button class="btn0">BACK</button></a>
+  <a href='../../13curl/curl.php '><button class="btn0">BACK</button></a>
   <a href="..#"><button class="btn1">NEXT</button></a>
 </body>
 
