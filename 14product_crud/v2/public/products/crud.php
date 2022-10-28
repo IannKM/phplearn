@@ -3,7 +3,7 @@
 
 /* database connection string */
  /** @var $pdo \PDO  */
-$pdo = require_once 'views/partials/database.php';
+$pdo = require_once '../../views/partials/database.php';
 
 
 
@@ -25,7 +25,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<?php include_once 'views/partials/header.php';  ?>
+<?php include_once '../../views/partials/header.php';  ?>
 
 
   <h1> PRODUCTS CRUD </h1>
@@ -64,7 +64,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
         <tr>
           <th scope="row"><?php echo $i + 1 ?> </th>
           <td>
-            <img src="<?php echo $product['image'] ?>" class="thumb-image ">
+            <img src="/<?php echo $product['image'] ?>" class="thumb-image ">
           </td>
           <td><?php echo $product['title'] ?></td>
           <td><?php echo $product['price'] ?></td>

@@ -2,7 +2,7 @@
 
 /* database connection string */
     /** @var $pdo \PDO  */
-require_once 'views/partials/database.php';
+require_once '../../views/partials/database.php';
 
 $id = $_POST['id'] ?? null;
 

@@ -4,10 +4,10 @@
 
 /* database connection string */
   /** @var $pdo \PDO  */
-  require_once 'views/partials/database.php';
+  require_once '../../views/partials/database.php';
 
 /* Code for generating a random name to the folder where image is saved */
-require_once 'fxns.php';
+require_once '../../fxns.php';
 
 
 $id = $_GET['id'] ?? null;
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
    
-  require_once 'validate_product.php'; 
+  require_once '../../validate_product.php'; 
 
 
 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-<?php include_once 'views/partials/header.php';  ?>
+<?php include_once '../../views/partials/header.php';  ?>
 
  
   
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <h1> Update Product <b><?php echo $product['title']?> </b></h1>
 
-<?php include_once 'views/products/form.php';  ?>
+<?php include_once '../../views/products/form.php';  ?>
     
 
   </body>

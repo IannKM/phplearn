@@ -2,12 +2,12 @@
 
 /* database connection string */#
  /** @var $pdo \PDO  */
-$pdo = require_once 'views/partials/database.php';
+$pdo = require_once '../../views/partials/database.php';
 
 
 
 /* Code for generating a random name to the folder where image is saved */
-require_once 'fxns.php';
+require_once '../../fxns.php';
 
 /* How to check the current rquest method: is it POST OR GET */
        /*  echo '<pre>'; 
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($errors)) {
 
-    require_once 'validate_product.php';
+    require_once '../../validate_product.php';
         /* insert in the dtb */
         $statement = $pdo->prepare("INSERT INTO products (title, image, description, price, create_date)
                         VALUES (:title, :image, :description, :price, :date)");
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <!-- header -->
-<?php include_once 'views/partials/header.php';  ?>
+<?php include_once '../../views/partials/header.php';  ?>
 
 <p> 
     <a href="crud.php" class="btn btn-secondary"> BACK HOME</a>  
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    <h1> Create new Product </h1>
 
 <!-- forms part -->   
-<?php include_once 'views/products/form.php';  ?>
+<?php include_once '../../views/products/form.php' ?>
 
 
 
