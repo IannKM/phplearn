@@ -1,0 +1,12 @@
+{
+    "name": "ian/15autoloading",
+
+    "require": {
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "./app"
+        }
+    }
+}
