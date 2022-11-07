@@ -1,0 +1,10 @@
+{
+    "name": "ian/v3",
+    "autoload": {
+        "psr-4": {
+           "app\\": "./"
+        }
+    },
+    
+    "require": {}
+}
