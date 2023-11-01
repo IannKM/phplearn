@@ -37,7 +37,7 @@ for ($i=0; $i < 10 ; $i++) {
 
 }
 // foreach
-echo 'foreach<br> ';
+/* echo 'foreach<br> ';
 $fruits = ['apple', 'banana', 'grapes'];
 foreach ($fruits as $fruit) {
     echo $fruit;
@@ -48,7 +48,7 @@ echo 'foreach<br> ';
 $fruits = ['apple', 'banana', 'grapes'];
 foreach ($fruits as $i=> $fruit) {
     echo $i.' '. $fruit;
-}
+} */
 // Iterate over associative array
 
 $person = [

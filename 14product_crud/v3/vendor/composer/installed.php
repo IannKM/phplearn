@@ -3,7 +3,7 @@
         'name' => 'ian/v3',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'f0b76de9434d8eacfebd6754794b560c0c221a25',
+        'reference' => '29ddb273b787fded114407265475ae90c524c204',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'ian/v3' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'f0b76de9434d8eacfebd6754794b560c0c221a25',
+            'reference' => '29ddb273b787fded114407265475ae90c524c204',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

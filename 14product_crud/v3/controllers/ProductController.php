@@ -9,8 +9,11 @@ class ProductController
 
     public function index(Router $router)
         {
-            $router->
-           $router->renderView('products/index');
+            $products = $router->db->getProducts();
+           
+           $router->renderView('products/index', [
+                'products' => $products 
+           ]);
             
         }
 
